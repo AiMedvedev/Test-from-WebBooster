@@ -72,5 +72,6 @@
         "lint": [
             "@php ./vendor/php-parallel-lint/php-parallel-lint/parallel-lint . --show-deprecated -e php,phps --exclude vendor --exclude .git --exclude build"
         ]
-    }
+    },
+    "phpmailer/phpmailer": "^6.5"
 }

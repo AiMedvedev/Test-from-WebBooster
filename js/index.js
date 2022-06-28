@@ -36,30 +36,30 @@ const renderGoods = () => {
         `;
 
         goodsContainer.append(goodBlock);
-
     });
 };
 
 // Отправка формы
 
-const sendForm = () => {
+const sendForm = async () => {
 
     const formData = new FormData(modalForm);
 
-    fetch('https://jsonplaceholder.typicode.com/posts', { //sendmail.php
+    let response = await fetch('sendmail.php', {
             method: 'POST',
             body: formData
-        })
-        .then((res) => {
-            res.json();
-            modal.style.display = '';
         });
 
-};
+    if (response) {
+        let result = await response.json();
+        alert(result.message);
+    }
+}
 
 modalForm.addEventListener('submit', (e) => {
     e.preventDefault();
     sendForm();
+    modal.style.display = '';
 });
 
 

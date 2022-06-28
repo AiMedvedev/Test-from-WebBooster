@@ -2,25 +2,26 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
-	require 'phpMailer/src/Exception.php';
-	require 'phpMailer/src/PHPMailer.php';
+	require './phpMailer/src/Exception.php';
+	require './phpMailer/src/PHPMailer.php';
 
-	$email = new phpMailer(true);
-	$email->CharSet = 'UTF-8';
-	$email->setLanguage('ru', 'phpMailer/language/');
-	$email->IsHTML(true);
+	$mail = new phpMailer(true);
+	$mail->CharSet = 'UTF-8';
+	$mail->setLanguage('ru', './phpMailer/language/');
+	$mail->IsHTML(true);
 
-	$email->setForm('forcablaugrana@gmail.com', 'Для Алекса');
-	$email->addAddress('forcablaugrana@gmail.com');
-	$email->Subject('Новый заказ');
+	$mail->setFrom('forcablaugrana@gmail.com', 'Для Алекса');
+	$mail->addAddress('forcablaugrana@gmail.com');
+	$mail->Subject = 'Новый заказ';
 
-	$body = '<h1>Есть новый заказ!</h1>'
+	$body = '<h1>Есть новый заказ!</h1>';
 	$body.= '<p><strong>Имя: </strong> ' .$_POST['name'].'</p>';
 	$body.= '<p><strong>Телефон: </strong> ' .$_POST['phone'].'</p>';
-	$body.= '<p><strong>Товар: </strong> ' .$_POST['chosenGood'].'</p>';
+	//$body.= '<p><strong>Товар: </strong> ' .$_POST['chosenGood'].'</p>';
 
-	$mail->Body = $body;
-
+	$mail->Body = $body;	
+	
+	
 	if (!$mail->send()) {
 		$message = 'Ошибка!';
 	} else {
