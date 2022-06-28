@@ -1,0 +1,46 @@
+[
+  {
+    "id": "001",
+    "img": "img/image-122.jpg",
+    "name": "Striped Long Sleeve Shirt",
+    "label": "new",
+    "description": "Red/Sky Blue",
+    "price": "119",
+    "category": "Clothing",
+    "gender": "Womens",
+    "offer": false
+  },
+  {
+    "id": "002",
+    "img": "img/201mt210e.jpg",
+    "name": "Poplin Top With Sleeve Bow",
+    "label": "Bestseller",
+    "description": "Bright Blue",
+    "price": "129",
+    "category": "Clothing",
+    "gender": "Womens",
+    "offer": false
+  },
+  {
+    "id": "003",
+    "img": "img/61SVZdHi1SL.jpg",
+    "name": "TOMS Women's Alpargata Loafer",
+    "label": "Bestseller",
+    "description": "Red",
+    "price": "219",
+    "category": "Shoes",
+    "gender": "Womens",
+    "offer": false
+  },
+  {
+    "id": "004",
+    "img": "img/thR2gxLUL1152.jpg",
+    "name": "Text T-Shirt",
+    "label": "Bestseller",
+    "description": "Pink and dogs",
+    "price": "119",
+    "category": "Clothing",
+    "gender": "Womens",
+    "offer": false
+  }
+]

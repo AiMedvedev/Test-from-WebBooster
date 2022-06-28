@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://smtpjs.com/v3/smtp.js" defer></script>
+	<script src="js/index.js" defer></script>
+	<title>Тестовое задание Вебмастер</title>
+</head>
+
+<body>
+	<section class="long-goods d-block">
+		<div class="container">
+			<div class="row align-items-center mb-4">
+				<div class="col-12">
+					<h2 class="section-title">Goods</h2>
+				</div>
+			</div>
+
+			<div class="row long-goods-list">
+
+			</div>
+		</div>
+	</section>
+
+	<div class="overlay" id="modal">
+		<div class="modal">
+			<header class="modal-header">
+				<h2 class="modal-title">Форма заявка</h2>
+				<button class="modal-close">x</button>
+			</header>
+
+			<form class="modal-form" action="">
+				<input class="modal-input" type="text" placeholder="Имя" name="name" required>
+				<input class="modal-input" type="text" placeholder="Телефон" name="phone" required>
+				<input class="modal-input" type="text" placeholder="Товар" name="chosenGood" disabled>
+				<button class="button buy" type="submit">
+					<span class="button-text">Заказать</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

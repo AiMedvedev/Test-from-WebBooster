@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+.button {
+    padding: 10px 20px;
+    background: #4592FF;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    font-family: 'Lato',
+        sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.button-price {
+    margin-right: 10px;
+}
+
+.buy {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.show-goods .long-goods {
+    display: block;
+}
+
+.label {
+    background-color: #3DC47E;
+    border-radius: 3px;
+    padding: 5px 12px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.card {
+    min-height: 370px;
+    border-radius: 10px;
+    padding-top: 60px;
+    padding-left: 46px;
+    padding-right: 46px;
+    padding-bottom: 80px;
+}
+
+.goods-card-btn {
+    display: block;
+    width: 100px;
+    margin: auto auto 0;
+}
+
+.goods-card-btn .button-price {
+    margin: 0;
+}
+
+.card-title {
+    color: #262D33;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: 'Roboto Slab',
+        serif;
+    max-width: 222px;
+    margin: 0;
+}
+
+.card-title.large {
+    max-width: 420px;
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    max-width: 176px;
+    color: #4B5157;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 25px;
+}
+
+.card-text.large {
+    max-width: 320px;
+}
+
+.card-price {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 900;
+}
+
+.text-light {
+    color: #fff
+}
+
+.section-title {
+    font-family: 'Roboto Slab',
+        serif;
+    font-size: 25px;
+    line-height: 30px;
+    color: #262D33;
+}
+
+.more {
+    text-decoration: none;
+    color: #262D33;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.goods-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    padding: 30px 35px 35px;
+    min-height: 440px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.goods-card .label {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+}
+
+.goods-title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #262D33;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 'Roboto Slab',
+        serif;
+}
+
+.goods-image {
+    object-fit: contain;
+    height: 190px;
+}
+
+.goods-description {
+    color: #4B5157;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.goods-price {
+    color: #262D33;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 900;
+}
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.modal {
+    background-color: #e0e0ff;
+    min-width: 600px;
+    max-height: 400px;
+    padding: 30px;
+    overflow: auto;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-title {
+    margin: 0 auto;
+}
+
+.modal-close {
+    position: absolute;
+    background-color: transparent;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    border: none;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.modal-input {
+    margin-right: 30px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: none;
+    margin-bottom: 30px;
+}
+
+.mw-160 {
+    max-width: 160px;
+}
+
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #939699;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 20px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+@media (max-width: 992px) {
+
+    .modal {
+        min-width: 400px;
+        max-height: 300px;
+        padding: 20px;
+    }
+
+    .goods-card {
+        background-position: left top;
+        padding: 20px;
+        margin-bottom: 20px;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .card {
+        background-position: left top;
+        padding: 30px;
+        min-height: 250px;
+    }
+
+    .modal {
+        min-width: 300px;
+        max-height: 400px;
+        padding: 20px;
+    }
+
+}
