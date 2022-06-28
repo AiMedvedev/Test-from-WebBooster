@@ -3,11 +3,13 @@ const closeBtn = modal.querySelector('.modal-close');
 
 const modalForm = document.querySelector('.modal-form');
 const goodName = modalForm.querySelector('input.modal-input[name="chosenGood"]');
-const costomerName = modalForm.querySelector('input.modal-input[name="name"]');
-const costomerPhone = modalForm.querySelector('input.modal-input[name="phone"]');
+const customerName = document.querySelector('input.modal-input[name="name"]');
+const customerPhone = document.querySelector('input.modal-input[name="phone"]');
 
 const goodsContainer = document.querySelector('.long-goods-list');
 
+
+// Отрисовка карточек товара
 
 const renderGoods = () => {
     const goodsContainer = document.querySelector('.long-goods-list');
@@ -38,11 +40,13 @@ const renderGoods = () => {
     });
 };
 
-const sendForm = (e) => {
-    e.preventDefault();
+// Отправка формы
+
+const sendForm = () => {
+
     const formData = new FormData(modalForm);
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {    //sendmail.php
+    fetch('https://jsonplaceholder.typicode.com/posts', { //sendmail.php
             method: 'POST',
             body: formData
         })
@@ -50,8 +54,16 @@ const sendForm = (e) => {
             res.json();
             modal.style.display = '';
         });
+
 };
 
+modalForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    sendForm();
+});
+
+
+// Первичная загрузка из БД и отслеживание кликов на кнопки
 
 fetch('/db/db.json')
     .then((res) => res.json())
@@ -69,28 +81,33 @@ fetch('/db/db.json')
         })
     })
 
+// Название товара в модальном окне берется из кликнутой карточки
+
 goodsContainer.addEventListener('click', (event) => {
     if (event.target.closest('.add-to-cart')) {
 
         const goodId = event.target.closest('.add-to-cart').dataset.id;
+        const data = JSON.parse(localStorage.getItem('goods'))
 
-        fetch('/db/db.json')
-            .then((res) => res.json())
-            .then((data) => {
-                data.forEach(item => {
-                    if (item.id === goodId) {
-                        goodName.value = item.name;
-                    }
-                })
-            })
+        data.forEach(item => {
+            if (item.id === goodId) {
+                goodName.value = item.name;
+            }
+        })
     }
 });
 
-modalForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    sendForm();
+// Валидация ввода в поля формы
+
+customerName.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^а-яА-Яa-zA-Z ]/g, "").trim()
 });
 
+customerPhone.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^0-9+]/g, "").trim()
+});
+
+//  Закрытие модального окна
 
 closeBtn.addEventListener('click', () => {
     modal.style.display = '';
