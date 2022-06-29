@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
+    background-color:antiquewhite;
 }
 
 section {
@@ -23,6 +24,8 @@ footer {
 img {
     max-width: 100%;
     height: auto;
+    margin: 15px 0;
+    padding: 0 15px;
 }
 
 button {
@@ -50,7 +53,7 @@ button {
 
 .buy {
     width: fit-content;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .show-goods .long-goods {
@@ -85,45 +88,20 @@ button {
     margin: 0;
 }
 
-.card-title {
-    color: #262D33;
-    font-size: 25px;
-    line-height: 30px;
-    font-family: 'Roboto Slab',
-        serif;
-    max-width: 222px;
-    margin: 0;
-}
-
-.card-title.large {
-    max-width: 420px;
-    font-size: 40px;
-    line-height: 50px;
-    margin-top: 30px;
+.goods-header {
     margin-bottom: 20px;
+    border-bottom: 1px solid darkslateblue;
 }
 
-.card-text {
-    max-width: 176px;
-    color: #4B5157;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 25px;
+.goods-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
 }
 
-.card-text.large {
-    max-width: 320px;
-}
-
-.card-price {
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 900;
-}
-
-.text-light {
-    color: #fff
+.goods-description {
+    margin-bottom: 20px;
 }
 
 .section-title {
@@ -148,10 +126,10 @@ button {
     flex-direction: column;
     position: relative;
     text-align: center;
-    padding: 30px 35px 35px;
     min-height: 440px;
-    border: 1px solid black;
+    border: 5px solid lightblue;
     border-radius: 8px;
+    background-color:#fff;
 }
 
 .goods-card .label {
@@ -166,6 +144,8 @@ button {
     color: #262D33;
     font-size: 16px;
     line-height: 25px;
+    min-height: 50px;
+    align-self: center;
     font-family: 'Roboto Slab', serif;
 }
 
