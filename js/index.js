@@ -46,13 +46,14 @@ const sendForm = async () => {
     const formData = new FormData(modalForm);
 
     let response = await fetch('sendmail.php', {
-            method: 'POST',
-            body: formData
-        });
+        method: 'POST',
+        body: formData
+    });
 
     if (response) {
         let result = await response.json();
         alert(result.message);
+        modalForm.reset();
     }
 }
 
@@ -75,10 +76,10 @@ fetch('/db/db.json')
         const buyBtn = document.querySelectorAll('.buyBtn');
 
         buyBtn.forEach(btn => {
-            btn.addEventListener('click', (e) => {
+            btn.addEventListener('click', () => {
                 modal.style.display = 'flex';
-            })
-        })
+            });
+        });
     })
 
 // Название товара в модальном окне берется из кликнутой карточки
@@ -87,13 +88,14 @@ goodsContainer.addEventListener('click', (event) => {
     if (event.target.closest('.add-to-cart')) {
 
         const goodId = event.target.closest('.add-to-cart').dataset.id;
-        const data = JSON.parse(localStorage.getItem('goods'))
+        const data = JSON.parse(localStorage.getItem('goods'));
 
         data.forEach(item => {
             if (item.id === goodId) {
                 goodName.value = item.name;
+                return goodName;
             }
-        })
+        });
     }
 });
 

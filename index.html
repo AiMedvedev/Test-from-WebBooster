@@ -28,9 +28,44 @@
 
 			<div class="row long-goods-list">
 
-			</div>
+			</div>	
 		</div>
 	</section>
+
+	<footer class="footer">
+		<!-- Yandex.Metrika informer -->
+		<a href="https://metrika.yandex.ru/stat/?id=89352724&amp;from=informer" target="_blank" rel="nofollow"><img
+				src="https://informer.yandex.ru/informer/89352724/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+				style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика"
+				title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+				class="ym-advanced-informer" data-cid="89352724" data-lang="ru" /></a>
+		<!-- /Yandex.Metrika informer -->
+
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function (m, e, t, r, i, k, a) {
+				m[i] = m[i] || function () {
+					(m[i].a = m[i].a || []).push(arguments)
+				};
+				m[i].l = 1 * new Date();
+				k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(
+					k,
+					a)
+			})
+			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+			ym(89352724, "init", {
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				trackHash: true
+			});
+		</script>
+		<noscript>
+			<div><img src="https://mc.yandex.ru/watch/89352724" style="position:absolute; left:-9999px;" alt="" />
+			</div>
+		</noscript>
+	</footer>
 
 	<div class="overlay" id="modal">
 		<div class="modal">
@@ -42,13 +77,16 @@
 			<form class="modal-form" action="">
 				<input class="modal-input" type="text" placeholder="Имя*" name="name" required>
 				<input class="modal-input" type="text" placeholder="Телефон*" name="phone" required>
-				<input class="modal-input" type="text" placeholder="Товар" name="chosenGood" disabled>
+				<input class="modal-input" type="text" placeholder="Товар" name="chosenGood" readonly>
 				<button class="button buy" type="submit">
 					<span class="button-text">Заказать</span>
 				</button>
 			</form>
 		</div>
 	</div>
+
+
+	<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

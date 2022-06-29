@@ -17,7 +17,7 @@
 	$body = '<h1>Есть новый заказ!</h1>';
 	$body.= '<p><strong>Имя: </strong> ' .$_POST['name'].'</p>';
 	$body.= '<p><strong>Телефон: </strong> ' .$_POST['phone'].'</p>';
-	//$body.= '<p><strong>Товар: </strong> ' .$_POST['chosenGood'].'</p>';
+	$body.= '<p><strong>Товар: </strong> ' .$_POST['chosenGood'].'</p>';
 
 	$mail->Body = $body;	
 	
